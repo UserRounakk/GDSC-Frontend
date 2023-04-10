@@ -28,8 +28,8 @@ function getData() {
                     let nData = data.data[i];
                     console.log(nData.images.jpg);
                     card.innerHTML += `
-                                <div class="col p-3" id="item">
-                                    <div class="card">
+                                <div class="col-12 col-lg-3 p-3" id="item">
+                                    <div class="card h-100">
                                         <div class="card-img">
                                             <img src="${nData.images.jpg.image_url}" width="100%" style="border: solid black">
                                         </div>
