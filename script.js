@@ -18,7 +18,7 @@ function getData() {
         };
     }
     if (search.length > 2) {
-        fetch('https://api.jikan.moe/v4/anime?q=' + search)
+        fetch('https://api.jikan.moe/v4/anime?q=' + encodeURIComponent(search))
             .then((res) => {
                 return res.json();
             })
@@ -26,7 +26,6 @@ function getData() {
                 count = data.pagination.items.count;
                 for (var i = 0; i < count; i++) {
                     let nData = data.data[i];
-                    console.log(nData.images.jpg);
                     card.innerHTML += `
                                 <div class="col-12 col-lg-3 p-3" id="item">
                                     <div class="card h-100">
